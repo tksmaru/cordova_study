@@ -5,3 +5,6 @@
 platforms/android/CordovaLib/ant-build/
 platforms/android/ant-build/
 
+#ios
+#ios log
+platforms/ios/cordova/console.log

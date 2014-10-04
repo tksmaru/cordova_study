@@ -8,3 +8,10 @@ platforms/android/ant-build/
 #ios
 #ios log
 platforms/ios/cordova/console.log
+
+xcuserdata
+
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+

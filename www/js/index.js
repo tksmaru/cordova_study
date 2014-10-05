@@ -37,11 +37,12 @@ var app = {
 
         var options = {
           quality: 50,
-          destinationType: navigator.camera.DestinationType.FILE_URI
+          destinationType: navigator.camera.DestinationType.FILE_URI,
+          sourceType: navigator.camera.PictureSourceType.SAVEDPHOTOALBUM
         };
 
         // カメラを起動する
-        navigator.camera.getPicture( function(imageData) {
+        navigator.camera.getPicture(function(imageData) {
           alert(imageData);
         }, function() {
           alert('fail');

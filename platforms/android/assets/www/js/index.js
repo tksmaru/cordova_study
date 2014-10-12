@@ -35,18 +35,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        var options = {
-          quality: 50,
-          destinationType: navigator.camera.DestinationType.FILE_URI,
-          sourceType: navigator.camera.PictureSourceType.SAVEDPHOTOALBUM
-        };
-
-        // カメラを起動する
-        navigator.camera.getPicture(function(imageData) {
-          alert(imageData);
+        cordova.exec(function() {
+          console.log('プラグインの呼び出しに成功しました');
         }, function() {
-          alert('fail');
-        }, options);
+          console.log('プラグインの呼び出しに失敗しました');
+        }, 'MyFirstPlugin', 'actionName', ['Hello my first Cordova plugin']);
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
